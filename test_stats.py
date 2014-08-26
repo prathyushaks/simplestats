@@ -25,6 +25,14 @@ def test_floating_mean1():
     exp = 1.5
     assert_equal(obs, exp)
 
+def median(vals):
+    vals.sort()
+    length = len(vals)
+    index = length / 2
+    if length % 2 == 0:
+       return mean([vals[index], vals[index - 1]])
+    else:
+       return vals[index]
 # FIXME Put Median tests here
 
 # FIXME Put Mode tests here
